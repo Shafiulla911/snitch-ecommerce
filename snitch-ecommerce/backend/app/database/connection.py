@@ -1,7 +1,10 @@
 import os
 import logging
+from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
+
+load_dotenv()
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("snitch_db")
@@ -9,7 +12,7 @@ logger = logging.getLogger("snitch_db")
 # Default MySQL URL (overridable via environment variable DATABASE_URL or MYSQL_URL)
 DEFAULT_MYSQL_URL = os.getenv(
     "DATABASE_URL", 
-    os.getenv("MYSQL_URL", "mysql+pymysql://root:password@localhost:3306/snitch_db")
+    os.getenv("MYSQL_URL", "mysql+pymysql://root:Password@localhost:3306/snitch_db")
 )
 SQLITE_FALLBACK_URL = "sqlite:///./snitch.db"
 
