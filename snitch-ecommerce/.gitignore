@@ -1,0 +1,13 @@
+node_modules/
+dist/
+__pycache__/
+*.py[cod]
+*.db
+backend/snitch.db
+.env
+.env.local
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

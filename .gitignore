@@ -1,0 +1,33 @@
+# Node dependencies
+node_modules/
+frontend/node_modules/
+
+# Production build outputs
+dist/
+frontend/dist/
+
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+backend/__pycache__/
+backend/app/__pycache__/
+backend/app/database/__pycache__/
+backend/app/models/__pycache__/
+backend/app/routes/__pycache__/
+backend/app/services/__pycache__/
+
+# Virtual environment & Database
+.venv/
+venv/
+*.db
+backend/snitch.db
+
+# Environment variables & system files
+.env
+.env.local
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

@@ -1,0 +1,85 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-canvas);
+  padding: 20px 24px;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Page Layout Wrappers */
+.page-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 24px 0 48px 0;
+}
+
+.page-header-block {
+  background: var(--bg-block);
+  border-radius: var(--radius-block);
+  padding: 36px 40px;
+  border: 1px solid var(--border-block);
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-block);
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  letter-spacing: -0.03em;
+}
+
+.page-subtitle {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* Grids */
+.grid-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.grid-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Toast alert notification */
+.toast-notification {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  background: var(--accent-black);
+  color: #ffffff;
+  padding: 14px 24px;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  animation: slideInUp 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
